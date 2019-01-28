@@ -1,0 +1,37 @@
+#!/usr/bin/env python
+
+import random as r
+import time
+import os
+
+taunts = [
+        "I smell invalid signatures!",
+        "I got a golden senate seat for ya!",
+        "Special interest money is delicious!",
+        "I totally did not take Ed Burkes money.",
+        "beep boop bop",
+        "call me if you need a city job",
+        "why fight me when you can join me",
+        "is this line wiretapped?",
+        "extortion goes so well elections"
+        ]
+
+
+prev = [0, 1]
+
+def next_index():
+    """minimizing immediate repeats while being loose and 
+    somewhat random otherwise"""
+    random_index = 0
+    while random_index in prev:
+        random_index = r.randint(0, len(taunts) - 1)
+    prev[0] = prev[1]
+    prev[1] = random_index
+    return random_index
+
+
+while True:
+    time.sleep(r.randint(5, 10)) 
+    index = next_index()
+    cmd = "espeak -s 180 -v us-mbrola-3 -a 200 -p 50 \'%s\'" % taunts[index]
+    os.system(cmd)

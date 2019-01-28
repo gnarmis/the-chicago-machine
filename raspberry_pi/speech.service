@@ -1,0 +1,13 @@
+[Unit]
+Description=Make a Speech Service
+After=network.target
+
+[Service]
+ExecStart=/home/pi/speech
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardInput=inherit
+User=pi
+
+[Install]
+WantedBy=multi-user.target

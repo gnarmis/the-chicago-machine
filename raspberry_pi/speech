@@ -1,0 +1,21 @@
+#!/bin/bash
+
+pause () {
+	sleep 0.25 
+};
+
+s () {
+	pause
+	espeak -s 180 -v us-mbrola-3 -a 200 -p 50 "$@" > /dev/null 2>&1
+}
+
+jingle () {
+	aplay ./slot_machine.wav
+}
+
+
+jingle
+s 'i am the chicago machine'
+s 'the city must work'
+s 'no matter the cost'
+./taunt

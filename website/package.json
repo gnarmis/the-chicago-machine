@@ -1,0 +1,28 @@
+{
+  "name": "the-chicago-machine-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "firebase": "^5.7.3",
+    "next": "^7.0.2",
+    "react": "^16.7.0",
+    "react-awesome-toasts": "0.0.9",
+    "react-dom": "^16.7.0",
+    "react-firebase-file-uploader": "^2.4.2",
+    "react-firebaseui": "^3.1.2",
+    "react-firestore": "^0.10.3"
+  },
+  "devDependencies": {
+    "firebase-tools": "^6.3.0",
+    "prettier": "^1.15.3"
+  }
+}
