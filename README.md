@@ -1,11 +1,45 @@
 # The Chicago Machine
 
-This projects holds the source code involved in making our robot for Robot Riot
-2019 in Chicago.
+![the-chicago-machine](/the-chicago-machine.png)
 
-Private information has been stripped out.
+This projects holds the source code for [@gnarmis](https://twitter.com/gnarmis) and [@lukeshepard](https://twitter.com/lukeshepard)'s robot for Robot Riot
+January 2019 in Chicago.
+
+- [System Design](#system-design) –– the full system
+- [Website](#website) –– Next.js + Firebase
+- [Raspberry Pi](#raspberrypi) –– custom "taunting" scripts + Twitch.tv streaming
+
+## System Design
+
+![system-design](/system_design.png)
+![prototype](/prototype.jpeg)
+
+Regular whiteboards and the SketchPaper iOS app were great tools, along with
+just meeting regularly. We went through a lot of sketches, prototypes, and video
+updates of individual explorations.
+
+This was our first real build, so we made paper and cardboard prototypes, bought
+servos and basic batteries, stayed at 6 volts for electronics, went to physical
+stores and talked to vendors for advice, and figured out what worked and what
+didn't. I even checked out the Chicago Public Library's Maker Lab, which
+provides very accessible 3D printing for like \$1 per 30 min job –– along with
+educational resources. Also, fried some components and boards lol.
+
+Some things we learned:
+
+- Simpler is better. We decided to do basic RC for motion control and raspberry
+  pi for the fancy features like video streaming. This was super helpful when
+  the raspberry pi's WiFi-based control mechanisms started flaking out because
+  of various WiFi/cell hotspot issues.
+- Grip, speed, basic design: these factors will make the difference.
+- https://www.servocity.com/actobotics is awesome. Wish we'd found it sooner.
+- Explore, test, explore some more. Our final design was built within a day of
+  the competition –– maybe too close but in the meantime we'd figured out how
+  much time we'd need and were a lot more confident in what we could build (by building again and again, often from scratch).
 
 ## Website
+
+![website](/website.png)
 
 The website is a small webapp where we hooked up a Twitch.tv stream coming from the robot, along with some crowd-pleasing voting functionality.
 
